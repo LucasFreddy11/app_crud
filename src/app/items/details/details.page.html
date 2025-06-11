@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/items/list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles del Item</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="editItem()">
+        <ion-icon name="pencil"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="item">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ item.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ item.description }}</p>
+      <!-- Añade más campos según necesites -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

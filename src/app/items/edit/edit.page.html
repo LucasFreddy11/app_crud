@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/items/list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Item</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-textarea formControlName="description"></ion-textarea>
+    </ion-item>
+    
+    <ion-button type="submit" expand="block" [disabled]="!itemForm.valid">
+      Actualizar
+    </ion-button>
+  </form>
+</ion-content>
