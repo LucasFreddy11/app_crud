@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   // Reemplaza con tu URL de Railway
-  private apiUrl = 'TU_URL_RAILWAY/api/items';
+  private apiUrl = 'https://appcrud-production.up.railway.app:8080/api/items';
 
   constructor(private http: HttpClient) { }
 

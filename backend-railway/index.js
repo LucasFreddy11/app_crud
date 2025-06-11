@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const { Pool } = require('pg');
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 app.use(bodyParser.json());
@@ -26,7 +27,6 @@ app.get('/api/items', async (req, res) => {
 
 // ... (las otras rutas CRUD que mostré antes)
 
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
